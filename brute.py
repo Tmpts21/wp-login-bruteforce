@@ -6,16 +6,13 @@ import requests
 import argparse   
 
 def brute( username , password , url)  :    
-    #url 
-        
-
+    #add the two parameters (username , password)    
     PARAMS = { 
               'username': username, 
               'password' : password  
              }   
-    print(url)
-
-    print(PARAMS)
+    
+    print(url , PARAMS)
 
     #r = requests.get(url = URL, params = PARAMS) 
       
