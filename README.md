@@ -1,4 +1,4 @@
-# python-bruteforc 🔥🚀
+# python-wp-bruteforce 🔥🚀
 python Bruteforce login script for wordpress 👻
 
 * -p = file path to password list file 
