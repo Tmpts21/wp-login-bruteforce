@@ -5,7 +5,7 @@ python Bruteforce login script for wordpress 👻
 * -u = valid username 
 * -t = target address 
 
-**target should should be look like this http://site.com/wp-login.php**
+**target should should look like this http://site.com/wp-login.php**
 
 # example usage : 
 
