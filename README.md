@@ -9,7 +9,7 @@ python Bruteforce login script for wordpress 👻
 
 # example usage : 
 
-$ python3 bf.py -u admin -p /usr/share/wordlist/rockyou.txt -t http://192.168.254.105/weblog/wp-login.php 
+$ python3 bf.py -u unclestinky -p /usr/share/wordlist/rockyou.txt -t http://192.168.254.105/weblog/wp-login.php 
 
       ____      ____ _________  ____________  ____________                         
       \   \    /   / |_____   | |______     \ |_   ______|  
