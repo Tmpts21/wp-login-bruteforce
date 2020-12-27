@@ -1,8 +1,8 @@
-# python-bruteforce
-python Bruteforce login script for wordpress 🚀🐱‍💻
+# python-bruteforc 🔥🚀
+python Bruteforce login script for wordpress 👻
 
 * -p = file path to password list file 
-* -u = valid usernae 
+* -u = valid username 
 * -t = target address 
 
 **target should should be look like this http://site.com/wp-login.php**
