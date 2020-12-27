@@ -47,7 +47,7 @@ def execute  () :
             File = args.passlist  
 
     else : 
-        File = "test.txt"    
+        File = "passwords.txt"    
 
     with open(File , 'r' ) as passwords:
         for password in passwords:     
