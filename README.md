@@ -7,7 +7,7 @@ python Bruteforce login script for wordpress 👻
 
 **target should should look like this http://site.com/wp-login.php**
 
-# usage : 
+# usage 🛸: 
 ## brute force with valid username 🎃:   
 python3 bf.py -t http://192.168.254.107/wp-login.php  -u elliot -p /home/mivatampos/ctf/mr_robot_1/fsocity.txt  
 
